@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Order Confirmed | Zee's Sweet Treats</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="success-page">
+
+  <section class="success-section">
+    <div class="success-card">
+
+      <a href="index.html" class="logo success-logo">
+        <img src="logo.png" alt="Zee's Sweet Treats Logo" />
+
+        <div class="logo-text">
+          <h2>Zee's</h2>
+          <span>Sweet Treats</span>
+        </div>
+      </a>
+
+      <div class="success-icon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <span class="success-label">ORDER RECEIVED</span>
+
+      <h1>Thank You For Your Order</h1>
+
+      <p>
+        Your order has been received successfully. Zee will contact you shortly to confirm availability,
+        payment and preparation time.
+      </p>
+
+      <div class="success-ref">
+        <span>Your Reference</span>
+        <strong id="orderRef">ZEE-ORDER</strong>
+      </div>
+
+      <div class="success-steps">
+        <div>
+          <i class="fa-solid fa-clipboard-check"></i>
+          <h4>1. Order Received</h4>
+          <p>We have received your order details.</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-cake-candles"></i>
+          <h4>2. Preparation</h4>
+          <p>Zee will confirm and prepare your treats.</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-motorcycle"></i>
+          <h4>3. Yango / Collection</h4>
+          <p>If using Yango, request your driver only once your order is ready.</p>
+        </div>
+      </div>
+
+      <div class="success-actions">
+        <a href="https://wa.me/260974451250" target="_blank" class="primary-btn">
+          WhatsApp Zee
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="order.html" class="secondary-btn">
+          Place Another Order
+        </a>
+      </div>
+
+      <a href="index.html" class="home-link">Back to Home</a>
+
+    </div>
+  </section>
+
+  <script>
+    const savedRef = localStorage.getItem("ZEE_LAST_ORDER_REF");
+
+    const ref =
+      savedRef ||
+      "ZEE-" + Math.random().toString(16).slice(2, 8).toUpperCase();
+
+    document.getElementById("orderRef").textContent = ref;
+  </script>
+
+</body>
+</html>
