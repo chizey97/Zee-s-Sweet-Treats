@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Checkout | Zee's Sweet Treats</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="checkout-page">
+
+<div class="announcement">
+
+<div class="announcement-content">
+
+<div class="announcement-item">
+
+<i class="fa-solid fa-shield-heart"></i>
+
+Secure Checkout
+
+</div>
+
+<div class="announcement-item">
+
+<i class="fa-solid fa-cake-candles"></i>
+
+Freshly Prepared
+
+</div>
+
+<div class="announcement-item">
+
+<i class="fa-solid fa-motorcycle"></i>
+
+Customer Arranged Yango
+
+</div>
+
+</div>
+
+</div>
+
+<header class="navbar">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+<img src="logo.png">
+
+<div class="logo-text">
+
+<h2>Zee's</h2>
+
+<span>Sweet Treats</span>
+
+</div>
+
+</a>
+
+<div class="nav-buttons">
+
+<a href="order.html" class="secondary-btn">
+
+Back to Menu
+
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="checkout-section">
+
+<div class="container">
+
+<div class="checkout-grid">
+
+<!-- LEFT COLUMN -->
+
+<div class="checkout-form">
+
+<div class="section-heading" style="text-align:left;margin-bottom:40px;">
+
+<span>CHECKOUT</span>
+
+<h2>Complete Your Order</h2>
+
+<p>
+
+You're only a few steps away from enjoying your treats.
+
+</p>
+
+</div>
+
+<div class="form-card">
+
+<h3>
+
+Customer Information
+
+</h3>
+
+<div class="input-group">
+
+<label>
+
+Full Name
+
+</label>
+
+<input
+type="text"
+id="customerName"
+placeholder="Your Full Name">
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Phone Number
+
+</label>
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="097XXXXXXX">
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Email Address (Optional)
+
+</label>
+
+<input
+type="email"
+id="customerEmail"
+placeholder="your@email.com">
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Special Instructions
+
+</label>
+
+<textarea
+id="customerNotes"
+rows="5"
+placeholder="Birthday message, colours, collection time, allergies..."></textarea>
+
+</div>
+
+</div>
+
+<div class="form-card">
+
+<h3>
+
+Collection Method
+
+</h3>
+
+<label class="option-card">
+
+<input
+type="radio"
+name="delivery"
+value="pickup"
+checked>
+
+<div>
+
+<strong>
+
+I'll Collect It Myself
+
+</strong>
+
+<p>
+
+We'll notify you when your order is ready.
+
+</p>
+
+</div>
+
+</label>
+
+<label class="option-card">
+
+<input
+type="radio"
+name="delivery"
+value="yango">
+
+<div>
+
+<strong>
+
+I'll Send a Yango Driver
+
+</strong>
+
+<p>
+
+Request a Yango ride after we tell you your order is ready.
+
+</p>
+
+</div>
+
+</label>
+
+</div>
+
+<div class="form-card">
+
+<h3>
+
+Payment Method
+
+</h3>
+
+<label class="option-card">
+
+<input
+type="radio"
+name="payment"
+value="airtel"
+checked>
+
+<div>
+
+<strong>
+
+Airtel Money
+
+</strong>
+
+<p>
+
+0974 451 250
+
+</p>
+
+</div>
+
+</label>
+
+<label class="option-card">
+
+<input
+type="radio"
+name="payment"
+value="mtn">
+
+<div>
+
+<strong>
+
+MTN MoMo
+
+</strong>
+
+<p>
+
+0963 539 378
+
+</p>
+
+</div>
+
+</label>
+
+<label class="option-card">
+
+<input
+type="radio"
+name="payment"
+value="cash">
+
+<div>
+
+<strong>
+
+Cash on Collection
+
+</strong>
+
+<p>
+
+Pay when collecting your order.
+
+</p>
+
+</div>
+
+</label>
+<div class="input-group">
+
+<label>
+
+Transaction Reference / Payment Note
+
+</label>
+
+<input
+type="text"
+id="paymentRef"
+placeholder="Optional: Airtel/MTN transaction ID">
+
+</div>
+
+<div class="payment-note">
+
+<i class="fa-solid fa-circle-info"></i>
+
+<p>
+
+After submitting your order, Zee will confirm availability, preparation time and final payment details before the order is prepared.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT COLUMN -->
+
+<aside class="checkout-summary">
+
+<div class="summary-card">
+
+<h3>
+
+Order Summary
+
+</h3>
+
+<div id="checkoutItems" class="checkout-items">
+
+<p class="empty-cart-message">
+
+No items found. Please go back to the menu and add items.
+
+</p>
+
+</div>
+
+<div class="summary-line">
+
+<span>
+
+Subtotal
+
+</span>
+
+<strong id="subtotal">
+
+K0
+
+</strong>
+
+</div>
+
+<div class="summary-line">
+
+<span>
+
+Delivery Fee
+
+</span>
+
+<strong>
+
+Customer Arranged
+
+</strong>
+
+</div>
+
+<div class="summary-total">
+
+<span>
+
+Total
+
+</span>
+
+<strong id="grandTotal">
+
+K0
+
+</strong>
+
+</div>
+
+<div class="yango-box">
+
+<i class="fa-solid fa-motorcycle"></i>
+
+<div>
+
+<h4>
+
+Yango Collection
+
+</h4>
+
+<p>
+
+If you choose Yango, request your driver only after we confirm your order is ready. You pay Yango directly.
+
+</p>
+
+</div>
+
+</div>
+
+<button id="placeOrderBtn" class="primary-btn place-order-btn">
+
+Place Order
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+<div id="checkoutMessage" class="checkout-message"></div>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="checkout.js"></script>
+
+</body>
+
+</html>
