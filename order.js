@@ -1,83 +1,74 @@
-const plusButtons = document.querySelectorAll(".plus");
-const minusButtons = document.querySelectorAll(".minus");
-const cartCount = document.querySelector(".cart-count");
-const orderTotal = document.getElementById("orderTotal");
-
-let cart = JSON.parse(localStorage.getItem("ZEE_CART")) || [];
-
-function saveCart() {
-  localStorage.setItem("ZEE_CART", JSON.stringify(cart));
-  updateUI();
-}
-
-function updateUI() {
-  const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-  const total = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
-
-  if (cartCount) cartCount.textContent = totalQty;
-  if (orderTotal) orderTotal.textContent = `K${total}`;
-
-  document.querySelectorAll("input[readonly]").forEach(input => {
-    input.value = 0;
-  });
-
-  cart.forEach(item => {
-    const button = document.querySelector(`.plus[data-name="${item.name}"]`);
-    if (button) {
-      const target = button.dataset.target;
-      const input = document.getElementById(target);
-      if (input) input.value = item.qty;
-    }
-  });
-}
-
-plusButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const name = button.dataset.name;
-    const price = Number(button.dataset.price);
-    const target = button.dataset.target;
-    const input = document.getElementById(target);
-
-    let existing = cart.find(item => item.name === name);
-
-    if (existing) {
-      existing.qty += 1;
-    } else {
-      cart.push({ name, price, qty: 1 });
-    }
-
-    if (input) input.value = Number(input.value) + 1;
-
-    saveCart();
-  });
-});
-
-minusButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const name = button.dataset.product;
-    let existing = cart.find(item => item.name === name);
-
-    if (!existing) return;
-
-    existing.qty -= 1;
-
-    if (existing.qty <= 0) {
-      cart = cart.filter(item => item.name !== name);
-    }
-
-    saveCart();
-  });
-});
-
+const productContainer = document.getElementById("productContainer");
+const filterButtons = document.querySelectorAll(".filter-btn");
 const checkoutBtn = document.getElementById("checkoutBtn");
+
+let activeCategory = "All";
+
+function renderProducts() {
+  if (!productContainer) return;
+
+  const filteredProducts =
+    activeCategory === "All"
+      ? PRODUCTS
+      : PRODUCTS.filter(product => product.category === activeCategory);
+
+  productContainer.innerHTML = filteredProducts
+    .map(product => {
+      const cartItem = getCart().find(item => item.id === product.id);
+      const qty = cartItem ? cartItem.qty : 0;
+
+      return `
+        <div class="product-card">
+          <div class="product-image">
+            <img src="${product.image}" alt="${product.name}">
+            <span class="product-badge">${product.badge}</span>
+          </div>
+
+          <div class="product-info">
+            <h3>${product.name}</h3>
+            <p>${product.description}</p>
+            <div class="price">${money(product.price)}</div>
+
+            <div class="quantity-selector">
+              <button onclick="decreaseProduct('${product.id}')">-</button>
+              <input type="number" value="${qty}" readonly>
+              <button onclick="increaseProduct('${product.id}')">+</button>
+            </div>
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+function increaseProduct(productId) {
+  addToCart(productId);
+  renderProducts();
+}
+
+function decreaseProduct(productId) {
+  removeFromCart(productId);
+  renderProducts();
+}
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    filterButtons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    activeCategory = button.dataset.category;
+    renderProducts();
+  });
+});
 
 if (checkoutBtn) {
   checkoutBtn.addEventListener("click", event => {
-    if (cart.length === 0) {
+    if (getCartCount() === 0) {
       event.preventDefault();
       alert("Please add at least one item before checkout.");
     }
   });
 }
 
-updateUI();
+renderProducts();
+updateCartIndicators();
