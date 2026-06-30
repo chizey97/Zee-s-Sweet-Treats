@@ -1,838 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8">
+  <title>Order Online | Zee's Sweet Treats</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<title>Order Online | Zee's Sweet Treats</title>
-
-<meta
-name="description"
-content="Order luxury cakes, cupcakes and brownies online from Zee's Sweet Treats.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-/>
-
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="menu-page">
 
-<!-- ======================================== -->
-<!-- Announcement -->
-<!-- ======================================== -->
-
-<div class="announcement">
-
-<div class="announcement-content">
-
-<div class="announcement-item">
-
-<i class="fa-solid fa-cake-candles"></i>
-
-Freshly Baked Daily
-
-</div>
-
-<div class="announcement-item">
-
-<i class="fa-solid fa-motorcycle"></i>
-
-Customer Arranged Yango Collection
-
-</div>
-
-<div class="announcement-item">
-
-<i class="fa-solid fa-heart"></i>
-
-Made With Love
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ======================================== -->
-<!-- NAVIGATION -->
-<!-- ======================================== -->
-
-<header class="navbar">
-
-<div class="container">
-
-<a href="index.html" class="logo">
-
-<img src="logo.png">
-
-<div class="logo-text">
-
-<h2>Zee's</h2>
-
-<span>Sweet Treats</span>
-
-</div>
-
-</a>
-
-<nav>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-
-<li><a href="#cakes">Cakes</a></li>
-
-<li><a href="#cupcakes">Cupcakes</a></li>
-
-<li><a href="#brownies">Brownies</a></li>
-
-</ul>
-
-</nav>
-
-<div class="nav-buttons">
-
-<button class="cart-button">
-
-<i class="fa-solid fa-bag-shopping"></i>
-
-<span class="cart-count">
-
-0
-
-</span>
-
-</button>
-
-</div>
-
-</div>
-
-</header>
-
-<!-- ======================================== -->
-<!-- HERO -->
-<!-- ======================================== -->
-
-<section class="menu-hero">
-
-<div class="container">
-
-<div class="menu-header">
-
-<span>
-
-ORDER ONLINE
-
-</span>
-
-<h1>
-
-Choose Your
-
-Favourite Treats
-
-</h1>
-
-<p>
-
-Select your desserts below.
-Your cart updates automatically as you add items.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ======================================== -->
-<!-- CATEGORY FILTERS -->
-<!-- ======================================== -->
-
-<section class="category-filter">
-
-<div class="container">
-
-<div class="filter-buttons">
-
-<button class="filter-btn active">
-
-All
-
-</button>
-
-<button class="filter-btn">
-
-Cakes
-
-</button>
-
-<button class="filter-btn">
-
-Cupcakes
-
-</button>
-
-<button class="filter-btn">
-
-Brownies
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ======================================== -->
-<!-- CAKES -->
-<!-- ======================================== -->
-
-<section
-class="menu-products"
-id="cakes">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span>
-
-SIGNATURE CAKES
-
-</span>
-
-<h2>
-
-Luxury Cakes
-
-</h2>
-
-</div>
-
-<div class="product-grid">
-
-<!-- Product -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="images/products/chocolate-cake.png"
-alt="Chocolate Cake">
-
-<span class="product-badge">
-
-Best Seller
-
-</span>
-
-</div>
-
-<div class="product-info">
-
-<h3>
-
-Chocolate Luxury Cake
-
-</h3>
-
-<p>
-
-Rich chocolate sponge finished with premium buttercream.
-
-</p>
-
-<div class="price">
-
-K200
-
-</div>
-
-<div class="quantity-selector">
-
-<button
-class="minus"
-data-product="Chocolate Luxury Cake">
-
--
-
-</button>
-
-<input
-type="number"
-value="0"
-min="0"
-readonly
-id="qty-cake-1">
-
-<button
-class="plus"
-data-name="Chocolate Luxury Cake"
-data-price="200"
-data-target="qty-cake-1">
-
-+
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- Product -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="images/products/carrot-cake.png"
-alt="Carrot Cake">
-
-<span class="product-badge">
-
-Signature
-
-</span>
-
-</div>
-
-<div class="product-info">
-
-<h3>
-
-Carrot Celebration Cake
-
-</h3>
-
-<p>
-
-Moist carrot cake with smooth cream cheese frosting.
-
-</p>
-
-<div class="price">
-
-K220
-
-</div>
-
-<div class="quantity-selector">
-
-<button
-class="minus"
-data-product="Carrot Celebration Cake">
-
--
-
-</button>
-
-<input
-type="number"
-value="0"
-min="0"
-readonly
-id="qty-cake-2">
-
-<button
-class="plus"
-data-name="Carrot Celebration Cake"
-data-price="220"
-data-target="qty-cake-2">
-
-+
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-<!-- Product -->
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="images/products/vanilla-cake.png"
-alt="Vanilla Cake">
-
-<span class="product-badge">
-
-Classic
-
-</span>
-
-</div>
-
-<div class="product-info">
-
-<h3>
-
-Vanilla Dream Cake
-
-</h3>
-
-<p>
-
-Soft vanilla sponge with elegant buttercream finishing.
-
-</p>
-
-<div class="price">
-
-K180
-
-</div>
-
-<div class="quantity-selector">
-
-<button
-class="minus"
-data-product="Vanilla Dream Cake">
-
--
-
-</button>
-
-<input
-type="number"
-value="0"
-min="0"
-readonly
-id="qty-cake-3">
-
-<button
-class="plus"
-data-name="Vanilla Dream Cake"
-data-price="180"
-data-target="qty-cake-3">
-
-+
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ======================================== -->
-<!-- CUPCAKES -->
-<!-- ======================================== -->
-
-<section
-class="menu-products"
-id="cupcakes">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span>
-
-CUPCAKES
-
-</span>
-
-<h2>
-
-Soft & Beautiful Cupcakes
-
-</h2>
-
-</div>
-
-<div class="product-grid">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="images/products/vanilla-cupcakes.png"
-alt="Vanilla Cupcakes">
-
-<span class="product-badge">
-
-Popular
-
-</span>
-
-</div>
-
-<div class="product-info">
-
-<h3>
-
-Vanilla Cupcakes
-
-</h3>
-
-<p>
-
-Classic vanilla cupcakes with soft buttercream swirls.
-
-</p>
-
-<div class="price">
-
-K12
-
-</div>
-
-<div class="quantity-selector">
-
-<button
-class="minus"
-data-product="Vanilla Cupcakes">
-
--
-
-</button>
-
-<input
-type="number"
-value="0"
-min="0"
-readonly
-id="qty-cup-1">
-
-<button
-class="plus"
-data-name="Vanilla Cupcakes"
-data-price="12"
-data-target="qty-cup-1">
-
-+
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="images/products/chocolate-cupcakes.png"
-alt="Chocolate Cupcakes">
-
-<span class="product-badge">
-
-Rich Cocoa
-
-</span>
-
-</div>
-
-<div class="product-info">
-
-<h3>
-
-Chocolate Cupcakes
-
-</h3>
-
-<p>
-
-Deep cocoa cupcakes with creamy chocolate frosting.
-
-</p>
-
-<div class="price">
-
-K12
-
-</div>
-
-<div class="quantity-selector">
-
-<button
-class="minus"
-data-product="Chocolate Cupcakes">
-
--
-
-</button>
-
-<input
-type="number"
-value="0"
-min="0"
-readonly
-id="qty-cup-2">
-
-<button
-class="plus"
-data-name="Chocolate Cupcakes"
-data-price="12"
-data-target="qty-cup-2">
-
-+
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img
-src="images/products/blueberry-cupcakes.png"
-alt="Blueberry Cupcakes">
-
-<span class="product-badge">
-
-Fruity
-
-</span>
-
-</div>
-
-<div class="product-info">
-
-<h3>
-
-Blueberry Cupcakes
-
-</h3>
-
-<p>
-
-Soft blueberry cupcakes with a light luxury finish.
-
-</p>
-
-<div class="price">
-
-K12
-
-</div>
-
-<div class="quantity-selector">
-
-<button
-class="minus"
-data-product="Blueberry Cupcakes">
-
--
-
-</button>
-
-<input
-type="number"
-value="0"
-min="0"
-readonly
-id="qty-cup-3">
-
-<button
-class="plus"
-data-name="Blueberry Cupcakes"
-data-price="12"
-data-target="qty-cup-3">
-
-+
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-<!-- ======================================== -->
-<!-- BROWNIES -->
-<!-- ======================================== -->
-
-<section class="menu-products" id="brownies">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span>BROWNIES</span>
-
-<h2>Rich Chocolate Brownies</h2>
-
-</div>
-
-<div class="product-grid">
-
-<div class="product-card">
-
-<div class="product-image">
-
-<img src="images/products/brownies.png" alt="Chocolate Brownies">
-
-<span class="product-badge">Fudgy</span>
-
-</div>
-
-<div class="product-info">
-
-<h3>Chocolate Brownies</h3>
-
-<p>Rich, soft and deeply chocolatey brownies made fresh.</p>
-
-<div class="price">K25</div>
-
-<div class="quantity-selector">
-
-<button class="minus" data-product="Chocolate Brownies">-</button>
-
-<input type="number" value="0" min="0" readonly id="qty-brownie-1">
-
-<button class="plus" data-name="Chocolate Brownies" data-price="25" data-target="qty-brownie-1">+</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ======================================== -->
-<!-- ORDER SUMMARY -->
-<!-- ======================================== -->
-
-<div class="order-summary-bar">
-
-<div>
-
-<span>Your Order</span>
-
-<strong id="orderTotal">K0</strong>
-
-</div>
-
-<a href="checkout.html" id="checkoutBtn">
-
-Continue to Checkout
-
-<i class="fa-solid fa-arrow-right"></i>
-
-</a>
-
-</div>
-
-<!-- ======================================== -->
-<!-- FOOTER -->
-<!-- ======================================== -->
-
-<footer class="footer">
-
-<div class="container footer-grid">
-
-<div class="footer-brand">
-
-<a href="index.html" class="logo footer-logo">
-
-<img src="logo.png" alt="Zee's Sweet Treats Logo">
-
-<div class="logo-text">
-
-<h2>Zee's</h2>
-
-<span>Sweet Treats</span>
-
-</div>
-
-</a>
-
-<p>Luxury cakes, cupcakes and brownies handcrafted for every sweet moment.</p>
-
-</div>
-
-<div class="footer-links">
-
-<h4>Quick Links</h4>
-
-<a href="index.html">Home</a>
-
-<a href="#cakes">Cakes</a>
-
-<a href="#cupcakes">Cupcakes</a>
-
-<a href="#brownies">Brownies</a>
-
-</div>
-
-<div class="footer-links">
-
-<h4>Contact</h4>
-
-<a href="tel:+260974451250">+260 974 451 250</a>
-
-<a href="https://wa.me/260974451250" target="_blank">WhatsApp Zee</a>
-
-<a href="#">Lusaka, Zambia</a>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-<p>© 2026 Zee's Sweet Treats. All rights reserved.</p>
-
-</div>
-
-</footer>
-
-<script src="order.js"></script>
+  <div class="announcement">
+    <div class="announcement-content">
+      <div class="announcement-item">
+        <i class="fa-solid fa-cake-candles"></i>
+        Freshly Baked Daily
+      </div>
+
+      <div class="announcement-item">
+        <i class="fa-solid fa-motorcycle"></i>
+        Customer Arranged Yango Collection
+      </div>
+
+      <div class="announcement-item">
+        <i class="fa-solid fa-heart"></i>
+        Made With Love
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Zee's Sweet Treats Logo" />
+
+        <div class="logo-text">
+          <h2>Zee's</h2>
+          <span>Sweet Treats</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <button class="cart-button" type="button">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="menu-hero">
+    <div class="container">
+      <div class="menu-header">
+        <span>ORDER ONLINE</span>
+        <h1>Choose Your Favourite Treats</h1>
+        <p>Select your desserts below. Your cart updates automatically as you add items.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-filter" id="menu">
+    <div class="container">
+      <div class="filter-buttons">
+        <button class="filter-btn active" type="button" data-category="All">All</button>
+        <button class="filter-btn" type="button" data-category="Cakes">Cakes</button>
+        <button class="filter-btn" type="button" data-category="Cupcakes">Cupcakes</button>
+        <button class="filter-btn" type="button" data-category="Brownies">Brownies</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-products">
+    <div class="container">
+      <div id="productContainer" class="product-grid"></div>
+    </div>
+  </section>
+
+  <div class="order-summary-bar">
+    <div>
+      <span>Your Order</span>
+      <strong id="orderTotal">K0</strong>
+    </div>
+
+    <a href="checkout.html" id="checkoutBtn">
+      Continue to Checkout
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo">
+          <img src="logo.png" alt="Zee's Sweet Treats Logo" />
+
+          <div class="logo-text">
+            <h2>Zee's</h2>
+            <span>Sweet Treats</span>
+          </div>
+        </a>
+
+        <p>Luxury cakes, cupcakes and brownies handcrafted for every sweet moment.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="checkout.html">Checkout</a>
+      </div>
+
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="tel:+260974451250">+260 974 451 250</a>
+        <a href="https://wa.me/260974451250" target="_blank">WhatsApp Zee</a>
+        <a href="#">Lusaka, Zambia</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Zee's Sweet Treats. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+  <script src="order.js"></script>
 
 </body>
-
 </html>
